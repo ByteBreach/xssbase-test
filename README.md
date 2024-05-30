@@ -31,8 +31,12 @@ This repository is related to the xssbase tool, designed for XSS vulnerability t
 ### xssbase Tool Information
 
 - **Author:** ByteBreach
-- **GitHub Repository:** [xssbase](https://github.com/bytebreach/xssbase-test)
+- **GitHub Repository:** [xssbase](https://github.com/bytebreach/xssbase)
 - **Description:** xssbase is a command-line XSS testing tool developed to automate the process of finding XSS vulnerabilities in web applications. It supports both Windows and Linux environments, providing a user-friendly interface for security testing.
+
+## Thanks
+
+A big thank you to all contributors and supporters who help improve security awareness and contribute to making the web a safer place.
 
 ## License
 
@@ -40,4 +44,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-**Author:** Fidal
+**TEAM :** ByteBreach

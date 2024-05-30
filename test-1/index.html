@@ -1,1 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="XSS Vulnerability Test Site by Fidal. Test for Cross-Site Scripting (XSS) vulnerabilities securely.">
+    <meta name="keywords" content="XSS, Cross-Site Scripting, Vulnerability Test, Security, Web Security, MrFidal, Fidal, XSSbase">
+    <meta name="author" content="Fidal">
+    <title>XSS Vulnerability Test Site</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #000;
+            color: #0f0;
+            margin: 0;
+            padding: 0;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .header {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #0f0;
+        }
+        .info-box {
+            background-color: #111;
+            color: #0f0;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #0f0;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #0f0;
+            color: #000;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #0f0;
+            color: #000;
+        }
+        .theme-switcher {
+            margin-top: 20px;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #0f0;
+        }
+        .social-icons {
+            margin-top: 20px;
+        }
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #0f0;
+            font-size: 24px;
+            text-decoration: none;
+            transition: transform 0.3s ease-in-out;
+        }
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+        .social-icons a i {
+            transition: color 0.3s;
+        }
+        .social-icons a:hover i {
+            color: #007bff;
+        }
+        .dark-mode .header,
+        .dark-mode .info-box,
+        .dark-mode .form-group label,
+        .dark-mode .btn {
+            color: #0f0;
+        }
+        .dark-mode .btn:hover {
+            background-color: #0f0;
+            color: #000;
+        }
 
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            .header {
+                font-size: 1.5em;
+            }
+            .social-icons a {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">XSS Vulnerability Test Site</div>
+        <div class="info-box">
+            <p>Use this site to test for Cross-Site Scripting (XSS) vulnerabilities. Please do not use this for malicious purposes.</p>
+        </div>
+        <form action="" method="GET">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <input type="text" id="message" name="message">
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+        <div class="theme-switcher">
+            <button class="btn" onclick="toggleTheme()">Switch Theme</button>
+        </div>
+        <div class="footer">
+            <p>By using this site, you agree to the terms and conditions.</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/mr.fidal" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/mrfidal" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/mr-fidal" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://t.me/mrfidal" target="_blank"><i class="fab fa-telegram"></i></a>
+            </div>
+            <p>&copy; 2024 <a style="color: green;" href="https://mrfidal.in">Fidal</a></p>
+        </div>
+    </div>
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+</html>

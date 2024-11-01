@@ -5,145 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="XSS Vulnerability Test Site by Fidal. Test for Cross-Site Scripting (XSS) vulnerabilities securely.">
     <meta name="keywords" content="XSS, Cross-Site Scripting, Vulnerability Test, Security, Web Security, MrFidal, Fidal, XSSbase">
-    <title>XSS Test Site</title>
+    <meta name="author" content="Fidal Palamparambil">
+    <meta property="og:title" content="XSS Vulnerability Test - Hack the Web">
+    <meta property="og:description" content="Test for Cross-Site Scripting (XSS) vulnerabilities securely.">
+    <meta property="og:image" content="https://vulhub.pages.dev/"> 
+    <meta property="og:url" content="https://vulhub.pages.dev/img/logo.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="XSS Vulnerability Test - Hack the Web">
+    <meta name="twitter:description" content="Test for Cross-Site Scripting (XSS) vulnerabilities securely.">
+    <meta name="twitter:image" content="https://vulhub.pages.dev/img/logo.jpg"> 
+    <link rel="icon" href="https://vulhub.pages.dev/img/logo.jpg" type="image/x-icon"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
- 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #111;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .container {
-            background-color: #333;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            border-radius: 8px;
-            text-align: center;
-            max-width: 800px;
-            width: 100%;
-        }
-        h1 {
-            color: #007bff;
-            margin-bottom: 20px;
-            font-size: 36px;
-        }
-        p {
-            color: #ccc;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-        .info-box {
-            background-color: #444;
-            color: #ffd700;
-            border: 1px solid #666;
-            padding: 10px;
-            border-radius: 4px;
-            margin-bottom: 20px;
-            text-align: left;
-        }
-        .info-box strong {
-            color: #ffd700;
-        }
-        form {
-            margin-bottom: 20px;
-        }
-        label {
-            display: block;
-            margin-bottom: 8px;
-            color: #ccc;
-        }
-        input[type="text"] {
-            width: calc(100% - 20px);
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #666;
-            border-radius: 4px;
-            background-color: #222;
-            color: #ccc;
-        }
-        input[type="submit"] {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            padding: 12px 20px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
-        }
-        input[type="submit"]:hover {
-            background-color: #0056b3;
-        }
-        .note {
-            color: #999;
-            margin-bottom: 30px;
-            font-size: 14px;
-        }
-        .social-icons {
-            margin-top: 20px;
-        }
-        .social-icons a {
-            display: inline-block;
-            margin-right: 10px;
-            color: #fff;
-            font-size: 20px;
-        }
-        .social-icons a:hover {
-            color: #007bff; 
-        }
-        .copyright {
-            color: #999;
-            font-size: 14px;
-            margin-top: 30px;
-        }
-        .copyright a {
-            color: #999;
-            text-decoration: none;
-        }
-        .copyright a:hover {
-            text-decoration: underline;
-        }
-
-        @media only screen and (max-width: 600px) {
-            h1 {
-                font-size: 28px;
-            }
-            input[type="text"] {
-                width: 100%;
-            }
-        }
-    </style>
+    <title>XSS Test Site - Hack the Web</title>
+    <link rel="stylesheet" type="text/css" href="https://vulhub.pages.dev/code/style.css">
 </head>
 <body>
     <div class="container">
         <h1>XSS Vulnerability Test</h1>
-        <p>Welcome to our XSS vulnerability testing platform. Please enter your name to proceed with the test.</p>
+        <p>Welcome to our XSS vulnerability testing platform. Enter your name and an optional URL to redirect to. <br> Let's hack the web securely!</p>
         <div class="info-box">
             <strong>Important:</strong>
             <p>This page is intentionally vulnerable to XSS attacks for educational purposes only.</p>
         </div>
         <form method="GET" action="">
             <label for="username">Your Name:</label>
-            <input type="text" id="username" name="username" placeholder="Enter your name">
+            <input type="text" id="username" name="username" placeholder="Enter your name" required>
+            <label for="redirect">Redirect URL:</label>
+            <input type="text" id="redirect" name="redirect" placeholder="Enter redirect URL (optional)">
             <input type="submit" value="Start Test">
         </form>
+        <div class="command-box">
+            <strong>Usage Command:</strong>
+            <p><code>curl -X GET 'https://example.com?username=<your_name>&redirect=<optional_url>'</code></p>
+        </div>
         <p class="note">Note: By proceeding with the test, you agree to our <a href="#">terms and conditions</a>.</p>
         <div class="social-icons">
             <a href="https://www.instagram.com/mr.fidal" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://twitter.com/mrfidal" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://github.com/mr-fidal" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/mrfidal" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://t.me/mrfidal" target="_blank"><i class="fab fa-telegram"></i></a>
         </div>
         <div class="copyright">
-            &copy; 2024 XSS Test Site | Author : <a href="https://mrfidal.in">Fidal</a>
+            &copy; 2024 XSS Test Site | Author : <a href="https://mrfidal.in">MrFidal</a>
         </div>
     </div>
+    <script type="text/javascript" src="https://vulhub.pages.dev/code/script.js"></script>
 </body>
 </html>

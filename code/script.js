@@ -32,3 +32,13 @@ if (redirectUrl) {
 } else if (username) {
     document.body.innerHTML += `<h2 style="color: #00ff00;">Hello, ${username}!</h2>`;
 }
+
+const userInput = urlParams.get('input');
+if (userInput) {
+    document.body.innerHTML += `<p>Your input: ${userInput}</p>`;
+}
+
+const customRedirect = urlParams.get('customRedirect');
+if (customRedirect) {
+    window.location.href = customRedirect;
+}

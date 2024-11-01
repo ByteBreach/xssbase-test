@@ -1,3 +1,8 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
 body {
     font-family: 'Courier New', Courier, monospace;
     background-color: #0c0c0c;

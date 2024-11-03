@@ -30,7 +30,6 @@ if (userInput) {
 
 const maliciousInput = `<script>alert('XSS Vulnerability Demonstration');</script>`;
 document.body.innerHTML += `<div style="border: 1px solid red; padding: 10px; margin: 10px 0;">
-    <h3>Malicious Input Example:</h3>
     <p>${maliciousInput}</p>
 </div>`;
 

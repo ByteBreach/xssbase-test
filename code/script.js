@@ -28,11 +28,6 @@ if (userInput) {
     document.body.innerHTML += `<p>Your input: ${userInput}</p>`;
 }
 
-const maliciousInput = `<script>alert('XSS Vulnerability Demonstration');</script>`;
-document.body.innerHTML += `<div style="border: 1px solid red; padding: 10px; margin: 10px 0;">
-    <p>${maliciousInput}</p>
-</div>`;
-
 console.log("Script executed by mrfidal.");
 console.log("Copyright © 2024 mrfidal. All rights reserved.");
 console.log("For more information, visit: https://mrfidal.in");
